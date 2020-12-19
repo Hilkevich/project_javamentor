@@ -48,6 +48,7 @@ public class Task418 {
     public static void main(String[] args) {
         System.out.println(getCallerClassAndMethodName());
         m1();
+        System.out.println("hello");
     }
 
     static void m1() {
