@@ -30,7 +30,7 @@ public class Task426 {
         BankClient bankClient = new BankClient();
         Employee employee = new Employee();
 
-        BankClient.setBadCreditHistory(false);
+        BankClient.setBadCreditHistory(true);
         BankClient.setProblemWithLaw(false);
 
         getCreditForClient(employee, bankClient);
