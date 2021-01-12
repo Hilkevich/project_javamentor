@@ -64,10 +64,5 @@ public class Task428 {
 
     public static void main(String[] args) {
 
-        Robot robot = new Robot(3, 5, true);
-
-    }
-    public static void moveRobot(RobotConnectionManager robotConnectionManager, int toX, int toY) {
-        //Твой код здесь
     }
 }
