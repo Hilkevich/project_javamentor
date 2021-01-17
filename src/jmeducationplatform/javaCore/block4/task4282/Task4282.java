@@ -1,7 +1,5 @@
 package jmeducationplatform.javaCore.block4.task4282;
 
-import jmeducationplatform.javaCore.block3.task3313.Task3313;
-
 public class Task4282 {
 
     public static void main(String[] args) {
