@@ -34,7 +34,4 @@ public class Demo {
         System.out.println(car4.getModel() + " " + car4.getColor());
 
     }
-
-
-
 }

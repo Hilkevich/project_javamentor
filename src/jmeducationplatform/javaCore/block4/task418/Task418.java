@@ -49,7 +49,7 @@ public class Task418 {
         System.out.println(getCallerClassAndMethodName());
         m1();
         System.out.println("hello igor");
-        System.out.println(" hello misha");
+        System.out.println("hello misha");
     }
 
     static void m1() {
