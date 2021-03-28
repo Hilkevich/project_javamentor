@@ -69,7 +69,7 @@ public class Task547 {
 
     }
 
-    public static Animal[] deserializeAnimalArray(byte[] data) {
+    public static Animal[] deserializeAnimalArray(byte[] data) {   //не нужно ловить Exception вложеный try избыточен!
 
         Animal[] animals;                      // объявляем ссылку animals, типа Animal[] (и инициализируем ее null.)
 
@@ -82,16 +82,16 @@ public class Task547 {
 
             for (int i = 0; i < animalCount; i++) {
 
-                try {
+               // try {
                     animals[i] = (Animal) ois.readObject();  // прочитываем объекты, даункастим к типу Animal, засовываем Animal[] animals
                     System.out.println(animals[i]);
 
-                } catch (ClassCastException | ClassNotFoundException e) {
-                    throw new IllegalArgumentException();
-                }
+               // } catch (ClassCastException | ClassNotFoundException e) {
+                  //  throw new IllegalArgumentException();
+               // }
             }
 
-        } catch (Exception e) {
+        } catch (ClassNotFoundException | RuntimeException | IOException e) {
             throw new IllegalArgumentException();
         }
 

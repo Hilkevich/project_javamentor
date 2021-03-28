@@ -35,33 +35,37 @@ public class Task528 {
 
         int inByte;                                          // переменная для сохранения байтов, доставаемых из потока inputStream (он же inp).
 
-        try {
+       // try {     // удаляем все try/catch нет в условии этого.
 
             while ((inByte = inputStream.read()) != -1) {   // читаем поток по 1 байту, записывая каждый в inByte, пока поток не == -1.(т.е пусто)
                 System.out.print(" | " + inByte);
                 if ( inByte % 2 == 0){                     // если остаток от деления байта == 0 (т.е четный)...
 
+
                     outputStream.write(inByte);            // ...пишем в поток outputStream по 1 байту из переменной, куда каждый сохраняется.
                     System.out.print(" четное");
 
                 }
+                outputStream.flush();                  // добавил, на платформе прошла, но после ментора перестала проходить без flush().
+                System.out.print(" ЧЕТНОЕ");
+
             }
 
-        } catch (FileNotFoundException f) {               // ловим возможные ошибки. Сначала мелкие...
-            f.printStackTrace();
+       // } catch (FileNotFoundException f) {               // ловим возможные ошибки. Сначала мелкие...
+           // f.printStackTrace();
 
-        } catch (IOException e) {                         // ...потом крупнее, что б не пропали мелкие.
-            e.printStackTrace();
+      //  } catch (IOException e) {                         // ...потом крупнее, что б не пропали мелкие.
+           // e.printStackTrace();
 
-        } finally {                                       // сюда заходим в любом случае (что бы полюбому закрыть потоки).
+      //  } finally {                                       // сюда заходим в любом случае (что бы полюбому закрыть потоки).
 
-            try {
-                inputStream.close();                      // закрываем входной поток.
-                outputStream.close();                     // закрываем выходной поток.
+           // try {
+               // inputStream.close();                      // закрываем входной поток.
+               // outputStream.close();                     // закрываем выходной поток.
 
-            } catch (IOException ignore) {                // ловим возможные ошибки при закрытии. Игнорируем.
+           // } catch (IOException ignore) {                // ловим возможные ошибки при закрытии. Игнорируем.
                       // пусто
             }
         }
-    }
-}
+   // }
+// }
